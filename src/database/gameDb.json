@@ -11,6 +11,16 @@
         "Tunis",
         "Sousse"
       ]
+    },
+    {
+      "name": "molka",
+      "price": 15,
+      "madeIn": "Autre",
+      "category": "Jeux de cartes",
+      "isNew": true,
+      "shops": [],
+      "id": "70kRkA6v3us"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

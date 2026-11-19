@@ -1,34 +1,35 @@
 <div class="container">
     <h3>Ajout d'un jeu</h3>
-    <form>
+    <form [formRoot]="gameForm" (submit)="onSubmit()">
         <div>
             <label for="gameName">Nom</label>
-            <input type="text" id="gameName" >
+            <input type="text" id="gameName" [formField]="gameForm.name">
         </div>
         <div>
             <label for="gamePrice">Prix</label>
-            <input type="number" id="gamePrice" >
+            <input type="number" id="gamePrice" [formField]="gameForm.price">
         </div>
 
         <div>
             <label> Made In </label>
             <label>
-                <input type="radio" value="Tunisie" >Tunisie
+                <input type="radio" value="Tunisie" [formField]="gameForm.madeIn">Tunisie
             </label>
             <label>
-                <input type="radio" value="Autre" >Autre
+                <input type="radio" value="Autre" [formField]="gameForm.madeIn">Autre
             </label>
         </div>
         <div>
             <label for="gameCategory">Catégorie</label>
-            <select id="gameCategory" >
-
-
+            <select id="gameCategory" [formField]="gameForm.category">
+                @for (c of categories; track c) {
+                    <option [value]="c">{{ c }}</option>
+                }
             </select>
         </div>
         <div>
             <label for="gameIsNew">
-                <input type="checkbox" id="gameIsNew" > Nouveau
+                <input type="checkbox" id="gameIsNew" [formField]="gameForm.isNew"> Nouveau
             </label>
         </div>
 
@@ -37,6 +38,5 @@
             <input type="reset" class="btn btn-warning"  value="Effacer">
         </div>
     </form>
-
+    <p>{{ games() | json }}</p>
 </div>
-
