@@ -32,9 +32,23 @@ export class GameAdd implements OnInit {
     this.gameService.getGames().subscribe();
   }
 
-  onSubmit() {
+   onSubmit() {
     console.log(this.gameModel());
     let { id, ...newGame } = this.gameModel();
-    this.gameService.addGame(newGame).subscribe();
+    this.gameService.addGame(newGame).subscribe(
+      () => this.resetForm()
+    );
+  }
+
+  resetForm() {
+    this.gameModel.set({
+      id: "",
+      name: "",
+      price: 0,
+      madeIn: "Tunisie",
+      category: Category.Puzzle,
+      isNew: true,
+      shops: []
+    });
   }
 }

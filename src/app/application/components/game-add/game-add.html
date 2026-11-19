@@ -3,11 +3,10 @@
     <form [formRoot]="gameForm" (submit)="onSubmit()">
         <div>
             <label for="gameName">Nom</label>
-            <input type="text" id="gameName" [formField]="gameForm.name">
-        </div>
+<input type="text" id="gameName" class="form-control" [formField]="gameForm.name">        </div>
         <div>
             <label for="gamePrice">Prix</label>
-            <input type="number" id="gamePrice" [formField]="gameForm.price">
+<input type="number" id="gamePrice" class="form-control" [formField]="gameForm.price">
         </div>
 
         <div>
@@ -21,7 +20,7 @@
         </div>
         <div>
             <label for="gameCategory">Catégorie</label>
-            <select id="gameCategory" [formField]="gameForm.category">
+            <select id="gameCategory" class="form-select" [formField]="gameForm.category">
                 @for (c of categories; track c) {
                     <option [value]="c">{{ c }}</option>
                 }
