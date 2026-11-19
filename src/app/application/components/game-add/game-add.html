@@ -3,10 +3,20 @@
     <form [formRoot]="gameForm" (submit)="onSubmit()">
         <div>
             <label for="gameName">Nom</label>
-<input type="text" id="gameName" class="form-control" [formField]="gameForm.name">        </div>
+<input type="text" id="gameName" class="form-control" [formField]="gameForm.name"> 
+@if (gameForm.name().invalid() && gameForm.name().dirty()) {
+    @for (error of gameForm.name().errors(); track $index) {
+        <div class="alert alert-danger">{{ error.message }}</div>
+    }
+}       </div>
         <div>
             <label for="gamePrice">Prix</label>
 <input type="number" id="gamePrice" class="form-control" [formField]="gameForm.price">
+@if (gameForm.price().invalid() && gameForm.price().dirty()) {
+    @for (error of gameForm.price().errors(); track $index) {
+        <div class="alert alert-warning">{{ error.message }}</div>
+    }
+}
         </div>
 
         <div>
@@ -33,7 +43,7 @@
         </div>
 
         <div>
-            <input type="submit" class="btn btn-success" value="Ajouter">
+            <input type="submit" class="btn btn-success" value="Ajouter" [disabled]="gameForm().invalid()">
             <input type="reset" class="btn btn-warning"  value="Effacer">
         </div>
     </form>

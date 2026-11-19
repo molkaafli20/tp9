@@ -20,6 +20,78 @@
       "isNew": true,
       "shops": [],
       "id": "70kRkA6v3us"
+    },
+    {
+      "name": "",
+      "price": 0,
+      "madeIn": "Tunisie",
+      "category": "Puzzle",
+      "isNew": true,
+      "shops": [],
+      "id": "AicUGrN6REA"
+    },
+    {
+      "name": "molka",
+      "price": 10,
+      "madeIn": "Tunisie",
+      "category": "Jeux de cartes",
+      "isNew": true,
+      "shops": [],
+      "id": "QrqAuNxOG_w"
+    },
+    {
+      "name": "molka",
+      "price": 50,
+      "madeIn": "Tunisie",
+      "category": "Jeux de cartes",
+      "isNew": true,
+      "shops": [],
+      "id": "x7fPY2dGsuI"
+    },
+    {
+      "name": "molka",
+      "price": 50,
+      "madeIn": "Tunisie",
+      "category": "Jeux de cartes",
+      "isNew": true,
+      "shops": [],
+      "id": "DAzUMsCZf6c"
+    },
+    {
+      "name": "yuio",
+      "price": 10,
+      "madeIn": "Tunisie",
+      "category": "Puzzle",
+      "isNew": true,
+      "shops": [],
+      "id": "OOiFapxrYNU"
+    },
+    {
+      "name": "Molka",
+      "price": 15,
+      "madeIn": "Tunisie",
+      "category": "Puzzle",
+      "isNew": true,
+      "shops": [],
+      "id": "0jxabs3b09Q"
+    },
+    {
+      "name": "Molka",
+      "price": 50,
+      "madeIn": "Tunisie",
+      "category": "Sport",
+      "isNew": true,
+      "shops": [],
+      "id": "N-ZagpHAUu8"
+    },
+    {
+      "name": "Molka",
+      "price": 70,
+      "madeIn": "Tunisie",
+      "category": "Jeux de cartes",
+      "isNew": true,
+      "shops": [],
+      "id": "6z0lCWQQvoc"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
